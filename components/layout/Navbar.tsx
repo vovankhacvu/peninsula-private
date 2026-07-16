@@ -104,7 +104,7 @@ animate={{
   }}
 >
           <Image
-  src="/logo.png"
+  src="/images/logo.png"
   alt="Peninsula Private"
   width={isScrolled ? 130 : 150}
   height={isScrolled ? 40 : 45}

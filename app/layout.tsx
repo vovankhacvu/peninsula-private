@@ -9,10 +9,13 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "Peninsula Private",
-  description: "Peninsula Private - Siêu phẩm căn hộ hạng sang tại Downtown Đà Nẵng",
+  description:
+    "Peninsula Private - Siêu phẩm căn hộ hạng sang tại Downtown Đà Nẵng",
   icons: {
-  icon: "/favicon-v2.png",
-},
+    icon: "/images/favicon-v2.png",
+    shortcut: "/images/favicon-v2.png",
+    apple: "/images/favicon-v2.png",
+  },
 };
 
 export default function RootLayout({
