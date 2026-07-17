@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import { Cormorant_Garamond } from "next/font/google";
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-title",
+});
 const manrope = Manrope({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -25,7 +31,11 @@ export default function RootLayout({
 }>) {
   return (
 <html lang="vi">
-  <body className={`${manrope.className} bg-white text-slate-900`}>{children}</body>
+  <body
+  className={`${manrope.className} ${cormorant.variable} bg-white text-slate-900`}
+>
+  {children}
+</body>
     </html>
   );
 }

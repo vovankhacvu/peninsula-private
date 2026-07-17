@@ -135,14 +135,14 @@ text-[#8C6B2F]
         hover:shadow-2xl
       "
       >
-        Đăng ký nhận thông tin chi tiết
+        Đăng ký nhận thông tin
       </Button>
 
       <Button
       variant="outline"
   onClick={() => {
     document
-      .getElementById("vi-tri")
+      .getElementById("tong-quan")
       ?.scrollIntoView({
         behavior: "smooth",
       });
@@ -163,7 +163,7 @@ text-[#8C6B2F]
         hover:shadow-2xl
       "
       >
-        Xem vị trí
+        Xem chi tiết
       </Button>
 
     </div>

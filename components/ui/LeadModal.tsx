@@ -13,6 +13,8 @@ export default function LeadModal({
 }: LeadModalProps) {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [budget, setBudget] = useState("");
+const [purpose, setPurpose] = useState("");
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   if (!open) return null;
@@ -133,6 +135,8 @@ setLoading(true);
       body: JSON.stringify({
         name,
         phone,
+        budget,
+  purpose,
       }),
     });
 // Hiển thị màn hình chờ khoảng 1.5 giây
@@ -143,6 +147,8 @@ setLoading(true);
 
 setName("");
 setPhone("");
+setBudget("");
+setPurpose("");
 
   } catch {
  setLoading(false);
@@ -220,7 +226,68 @@ setPhone("");
               focus:border-[#C59A45]
             "
           />
+<div className="space-y-2">
+  <label className="text-sm font-medium text-slate-700">
+    Ngân sách đầu tư
+  </label>
 
+  <select
+  value={budget}
+  onChange={(e) => setBudget(e.target.value)}
+    name="budget"
+    className="
+      w-full
+      rounded-xl
+      border
+      border-slate-300
+      bg-white
+      px-4
+      py-3
+      text-slate-800
+      focus:border-[#C59A45]
+      focus:outline-none
+      focus:ring-2
+      focus:ring-[#D6B46A]/30
+    "
+  >
+    <option value="">Chọn ngân sách</option>
+    <option>Dưới 3 tỷ</option>
+    <option>3 - 5 tỷ</option>
+    <option>5 - 10 tỷ</option>
+    <option>Trên 10 tỷ</option>
+  </select>
+</div>
+<div className="space-y-2">
+  <label className="text-sm font-medium text-slate-700">
+    Nhu cầu
+  </label>
+
+  <select
+  value={purpose}
+  onChange={(e) => setPurpose(e.target.value)}
+    name="purpose"
+    className="
+      w-full
+      rounded-xl
+      border
+      border-slate-300
+      bg-white
+      px-4
+      py-3
+      text-slate-800
+      focus:border-[#C59A45]
+      focus:outline-none
+      focus:ring-2
+      focus:ring-[#D6B46A]/30
+    "
+  >
+    <option value="">Chọn nhu cầu</option>
+    <option>Đầu tư</option>
+    <option>Để ở</option>
+    <option>Cho thuê</option>
+    <option>Chưa xác định</option>
+  </select>
+</div>
           <button
             type="submit"
             className="
