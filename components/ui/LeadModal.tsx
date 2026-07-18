@@ -178,7 +178,7 @@ setPurpose("");
       >
         <div className="text-center">
           <h2 className="text-3xl font-bold text-[#3F3528]">
-            Nhận bảng giá
+            Đăng kí nhận thông tin
           </h2>
 
           <p className="mt-3 text-[#6E655D] leading-7">
@@ -193,20 +193,30 @@ setPurpose("");
         >
           <input
             type="text"
-            placeholder="Họ và tên"
+            placeholder="Họ và tên" 
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="
-              w-full
-              rounded-2xl
-              border
-              border-[#E7DDC8]
-              px-5
-              py-4
-              outline-none
-              transition
-              focus:border-[#C59A45]
-            "
+  w-full
+  rounded-2xl
+  border
+  border-[#E7DDC8]
+  bg-white
+  px-5
+  py-4
+  text-[17px]
+  font-medium
+  text-[#3F3528]
+  placeholder:text-[#8E8276]
+  placeholder:font-normal
+  placeholder:text-[17px]
+  outline-none
+  transition-all
+  duration-300
+  focus:border-[#C59A45]
+  focus:ring-4
+  focus:ring-[#D6B46A]/20
+"
           />
 
           <input
@@ -215,21 +225,28 @@ setPurpose("");
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             className="
-              w-full
-              rounded-2xl
-              border
-              border-[#E7DDC8]
-              px-5
-              py-4
-              outline-none
-              transition
-              focus:border-[#C59A45]
-            "
+  w-full
+  rounded-2xl
+  border
+  border-[#E7DDC8]
+  bg-white
+  px-5
+  py-4
+  text-[17px]
+  font-medium
+  text-[#3F3528]
+  placeholder:text-[#8E8276]
+  placeholder:font-normal
+  placeholder:text-[17px]
+  outline-none
+  transition-all
+  duration-300
+  focus:border-[#C59A45]
+  focus:ring-4
+  focus:ring-[#D6B46A]/20
+"
           />
 <div className="space-y-2">
-  <label className="text-sm font-medium text-slate-700">
-    Ngân sách đầu tư
-  </label>
 
   <select
   value={budget}
@@ -258,9 +275,6 @@ setPurpose("");
   </select>
 </div>
 <div className="space-y-2">
-  <label className="text-sm font-medium text-slate-700">
-    Nhu cầu
-  </label>
 
   <select
   value={purpose}
@@ -282,10 +296,11 @@ setPurpose("");
     "
   >
     <option value="">Chọn nhu cầu</option>
-    <option>Đầu tư</option>
-    <option>Để ở</option>
-    <option>Cho thuê</option>
-    <option>Chưa xác định</option>
+    <option>Studio (36m²)</option>
+    <option>1 phòng ngủ (47m²)</option>
+    <option>2 phòng ngủ (72m²)</option>
+    <option>3 phòng ngủ (119m²)</option>
+    <option>Duplex (63m² - 239m²)</option>
   </select>
 </div>
           <button
@@ -306,7 +321,7 @@ setPurpose("");
               hover:-translate-y-1
             "
           >
-            Nhận bảng giá
+            Gửi ngay
           </button>
         </form>
 
