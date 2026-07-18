@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import { trackEvent } from "@/lib/gtag";
 type LeadModalProps = {
   open: boolean;
   onClose: () => void;
@@ -144,6 +144,10 @@ setLoading(true);
 
   setLoading(false);
     setSuccess(true);
+    trackEvent("generate_lead", {
+  form_name: "Lead Modal",
+  project: "Peninsula Private",
+});
 
 setName("");
 setPhone("");
