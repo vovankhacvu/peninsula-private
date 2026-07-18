@@ -3,7 +3,7 @@ import { useState } from "react";
 import LeadModal from "../ui/LeadModal";
 import { motion } from "framer-motion"; 
 import Button from "../ui/Button"; 
-
+import { headingFont } from "@/app/fonts";
 
 export default function Hero() {
   const [openLead, setOpenLead] = useState(false);
@@ -120,17 +120,22 @@ export default function Hero() {
 
       {/* Title */}
       <h1
-  className="
+  className={`
+    ${headingFont.className}
     mt-8
-    font-[family:var(--font-title)]
     text-[56px]
     lg:text-[82px]
-    leading-[0.9]
     font-semibold
-    tracking-[0.03em]
-    text-[#F7F3EC]
-    drop-shadow-[0_8px_20px_rgba(0,0,0,.35)]
-  "
+    leading-[0.95]
+    tracking-[-0.03em]
+    text-[#3F3528]
+    drop-shadow-[0_4px_12px_rgba(0,0,0,.25)]
+    text-[60px]
+lg:text-[90px]
+leading-[0.88]
+tracking-[-0.04em]
+font-semibold
+  `}
 >
   PENINSULA
   <br />

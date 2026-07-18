@@ -1,5 +1,5 @@
         "use client";
-
+import { headingFont } from "@/app/fonts";
         import Image from "next/image";
         import Reveal from "../ui/Reveal";
         import Gallery from "../ui/Gallery";
@@ -21,7 +21,14 @@
                     Mặt bằng
                     </span>
 
-                    <h2 className="mt-6 text-4xl font-semibold text-[#3F3528] md:text-6xl">
+                    <h2 className={`
+    ${headingFont.className}
+    text-5xl
+    md:text-6xl
+    font-semibold
+    leading-[1.05]
+    text-[#3F3528]
+  `}>
                     Thiết kế tối ưu
                     <br />
                     cho từng phong cách sống

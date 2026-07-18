@@ -1,4 +1,7 @@
 "use client";
+import Link from "next/link";
+import { FileText } from "lucide-react";
+import { headingFont } from "@/app/fonts";
 import { MessageCircle } from "lucide-react";
 import { FaFacebookF } from "react-icons/fa6";
 import { useState } from "react";
@@ -42,7 +45,7 @@ export default function Contact() {
 
         <div className="absolute inset-0 bg-gradient-to-t from-[#1F1C17] via-[#1F1C17]/90 to-[#1F1C17]/70" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-8 py-28">
+        <div className="relative z-10 mx-auto max-w-[1440px] px-6 lg:px-10 xl:px-16 py-28">
 
           <Reveal>
 
@@ -52,11 +55,18 @@ export default function Contact() {
                 Peninsula Private
               </span>
 
-              <h2 className="mt-6 text-5xl font-bold leading-tight">
+              <h2 className= {`
+    ${headingFont.className}
+    text-5xl
+    md:text-6xl
+    font-semibold
+    leading-[1.05] 
+    mt-6 text-5xl font-semibold leading-tight
+  `} >
                 Sẵn sàng sở hữu
                 <br />
                 tuyệt tác bên sông Hàn?
-              </h2>
+              </h2> 
 
               <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-white/70">
                 Đăng ký để nhận bảng giá mới nhất, mặt bằng,
@@ -73,10 +83,15 @@ export default function Contact() {
                     from-[#D6B46A]
                     via-[#C59A45]
                     to-[#A97C2E]
-                    px-8
-                    py-4
+                    px-9
+py-4
+text-[15px]
+tracking-wide
                     text-[#4B3512]
                     font-semibold
+                    hover:scale-105
+transition-all
+duration-300
                   "
                 >
                   ĐĂNG KÝ NGAY
@@ -92,15 +107,21 @@ export default function Contact() {
 
           {/* Footer Grid */}
 
-          <div className="grid gap-14 md:grid-cols-3">
+          <div className="
+  grid
+  md:grid-cols-2
+  xl:grid-cols-4
+  gap-12
+  xl:gap-20
+">
 
             {/* Công ty */}
 
             <Reveal delay={0.1}>
-                <div className="flex h-full flex-col justify-center">
+                <div>
               <div>
 
-                <h3 className="text-xl font-semibold">
+                <h3 className="text-2xl font-semibold text-white">
                   Peninsula Private
                 </h3>
 
@@ -108,8 +129,6 @@ export default function Contact() {
                   CÔNG TY CP KINH DOANH & ĐẦU TƯ
                   <br />
 ĐẤT XANH MIỀN TRUNG
-<br />
-CVKD: Võ Khắc Vũ
                 </p>
 
                 <div className="mt-6 flex items-start gap-3">
@@ -176,32 +195,84 @@ CVKD: Võ Khắc Vũ
             {/* Chính sách */}
 
             <Reveal delay={0.3}>
-              <div>
+  <div>
+    <h3 className="text-xl font-semibold">
+      Về chúng tôi
+    
+    </h3>
 
-                <h3 className="text-xl font-semibold">
-                  Chính sách
-                </h3>
+    <div className="mt-6 space-y-5">
 
-                <div className="mt-6 space-y-5">
+      <Link
+        href="/privacy-policy"
+        className="flex items-center gap-3 text-white/70 transition hover:text-[#D6B46A]"
+      >
+        <ShieldCheck className="h-5 w-5" />
+        Chính sách bảo mật
+      </Link>
 
-                  <a
-                    href="https://datxanhmientrung.com/chinh-sach-bao-mat"
-                    className="flex items-center gap-3 text-white/70 hover:text-[#D6B46A]"
-                  >
-                    <ShieldCheck className="h-5 w-5" />
-                    Chính sách bảo mật
-                  </a>
+      <Link
+        href="/terms-of-use"
+        className="flex items-center gap-3 text-white/70 transition hover:text-[#D6B46A]"
+      >
+        <FileText className="h-5 w-5" />
+        Điều khoản sử dụng
+      </Link>
 
-                </div>
+    </div>
+  </div>
+</Reveal>
+<Reveal delay={0.4}>
+  <div>
 
-              </div>
-            </Reveal>
+    <h3 className="text-xl font-semibold">
+      Nhận bảng giá
+    </h3>
+
+    <p className="mt-6 leading-8 text-white/70">
+      Đăng ký ngay để nhận:
+    </p>
+
+    <ul className="mt-5 space-y-3 text-white/70">
+
+      <li>✓ Bảng giá mới nhất</li>
+      <li>✓ Chính sách bán hàng</li>
+      <li>✓ Ưu đãi mới nhất</li>
+      <li>✓ Mặt bằng căn hộ</li>
+
+    </ul>
+  </div>
+</Reveal>
 
           </div>
 
-          <div className="mt-20 border-t border-white/10 pt-8 text-center text-sm text-white/50">
-            © 2026 Peninsula Private. All rights reserved.
-          </div>
+          <div className="mt-20 border-t border-white/10 pt-8">
+  <div className="flex flex-col items-center justify-between gap-4 text-sm text-white/50 lg:flex-row">
+
+    <p>
+      © 2026 Peninsula Private. All rights reserved.
+    </p>
+
+    <div className="flex items-center gap-6">
+
+      <Link
+        href="/privacy-policy"
+        className="transition hover:text-[#D6B46A]"
+      >
+        Chính sách bảo mật
+      </Link>
+
+      <Link
+        href="/terms-of-use"
+        className="transition hover:text-[#D6B46A]"
+      >
+        Điều khoản sử dụng
+      </Link>
+
+    </div>
+
+  </div>
+</div>
 
         </div>
       </section>

@@ -1,5 +1,5 @@
 "use client";
-
+import { headingFont } from "@/app/fonts";
 import Image from "next/image";
 import { Building2, MapPin, Gem, Trees, ShieldCheck, TrendingUp } from "lucide-react";
 import Reveal from "../ui/Reveal";
@@ -69,7 +69,14 @@ pt-15 pb-20
               Tổng quan
             </span>
 
-            <h2 className="mt-6 text-4xl font-bold leading-tight text-[#3F3528]">
+            <h2 className={`
+    ${headingFont.className}
+    text-5xl
+    md:text-6xl
+    font-semibold
+    leading-[1.05]
+    text-[#3F3528]
+  `}>
               Mọi giá trị hội tụ
               <br />
               trong một biểu tượng sống

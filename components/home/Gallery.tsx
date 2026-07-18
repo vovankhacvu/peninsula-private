@@ -1,5 +1,5 @@
 "use client";
-
+import { headingFont } from "@/app/fonts";
 import Image from "next/image";
 import Reveal from "../ui/Reveal";
 
@@ -54,13 +54,14 @@ export default function Gallery() {
             </span>
 
             <h2
-              className="
-              mt-6
-              text-4xl
-              font-semibold
-              text-[#3F3528]
-              md:text-6xl
-              "
+              className={`
+    ${headingFont.className}
+    text-5xl
+    md:text-6xl
+    font-semibold
+    leading-[1.05]
+    text-[#3F3528]
+  `}
             >
               Không gian sống
               <br />

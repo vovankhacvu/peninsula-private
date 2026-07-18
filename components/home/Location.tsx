@@ -1,4 +1,5 @@
 "use client";
+import { headingFont } from "@/app/fonts";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Reveal from "../ui/Reveal";
@@ -44,14 +45,14 @@ export default function Location() {
     </span>
 
     <h2
-      className="
-      mt-5
-      text-4xl
-      font-semibold
-      leading-tight
-      text-[#3F3528]
-      md:text-6xl
-      "
+      className={`
+    ${headingFont.className}
+    text-5xl
+    md:text-6xl
+    font-semibold
+    leading-[1.05]
+    text-[#3F3528]
+  `}
     >
       Trung tâm của
       <br />

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Reveal from "../ui/Reveal";
 import Button from "../ui/Button";
 import { CheckCircle2 } from "lucide-react";
-
+import { headingFont } from "@/app/fonts";
 export default function About() {
     const [openLead, setOpenLead] = useState(false);
   return (
@@ -83,7 +83,14 @@ export default function About() {
 
     <div className="mt-3 h-[2px] w-20 bg-[#B48A3A]" />
 
-    <h2 className="mt-6 text-4xl font-bold leading-tight text-[#3F3528]">
+    <h2 className={`
+    ${headingFont.className}
+    text-5xl
+    md:text-6xl
+    font-semibold
+    leading-[1.05]
+    text-[#3F3528]
+  `}>
       Biểu tượng sống
       <br />
       thượng lưu
