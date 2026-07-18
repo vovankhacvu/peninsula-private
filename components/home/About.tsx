@@ -13,55 +13,65 @@ export default function About() {
   id="gioi-thieu"
   className="scroll-mt-24 bg-[#FCFBF8] py-24"
 >
-      <div className="mx-auto grid max-w-7xl items-center gap-28 px-6 lg:grid-cols-2">
+      <div className="mx-auto
+      grid
+      max-w-7xl
+      items-center
+      gap-16
+      px-6
+      lg:grid-cols-[1.35fr_1fr]
+    ">
 
-        {/* Image */}
+        {/* Video */}
         <Reveal>
-          <div
-  className="
-  group
-  relative
-  overflow-hidden
-  rounded-[32px]
-  shadow-[0_30px_80px_rgba(0,0,0,.18)]
-"
->
-            <Image
-              src="/images/about.jpg"
-              alt="Peninsula Private"
-              width={1200}
-              height={800}
-              className="h-full w-full object-cover transition duration-700 group-hover:scale-110 duration-1000"
-            />
-<div
-  className="
-  absolute
-  inset-0
-  bg-gradient-to-t
-  from-black/45
-  via-transparent
-  to-transparent
-"
-/>
-            <div className="
-absolute
-left-10
-top-6
-rounded-full
-bg-white/90
-backdrop-blur-xl
-px-3
-py-1
-text-xs
-font-semibold
-tracking-wide
-text-[#8C6B2F]
-">
-              DOWNTOWN CENTER
+  <div
+    className="
+      group
+      relative
+      overflow-hidden
+      rounded-[32px]
+      shadow-[0_30px_80px_rgba(0,0,0,.18)]
+    "
+  >
+    <video
+      controls
+      playsInline
+      preload="metadata"
+      poster="/images/about/card-downtown.jpg"
+      className="
+        aspect-video
+        w-full
+        object-cover
+        transition
+        duration-700
+        group-hover:scale-[1.02]
+        rounded-[32px]
+      "
+    >
+      <source src="/videos/about.mp4" type="video/mp4" />
+      Trình duyệt không hỗ trợ video.
+    </video>
 
-            </div>
-          </div>
-        </Reveal>
+    <div
+      className="
+        absolute
+        left-10
+        top-6
+        rounded-full
+        bg-white/90
+        backdrop-blur-xl
+        px-3
+        py-1
+        text-xs
+        font-semibold
+        tracking-wide
+        text-[#8C6B2F]
+      "
+    >
+      DOWNTOWN ĐÀ NẴNG
+    </div>
+  </div>
+</Reveal>
 
         {/* Content */}
         <Reveal delay={0.15}>
