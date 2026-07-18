@@ -109,7 +109,7 @@ export default function Highlights() {
   {/* Background */}
 
   <Image
-  src="/images/highlights/view.jpg"
+  src="/images/highlights/view.webp"
   alt="View Sông Hàn"
   fill
   className="
@@ -297,7 +297,7 @@ export default function Highlights() {
   "
 >
 <Image
-  src="/images/highlights/diff.jpg"
+  src="/images/highlights/diff.webp"
   alt="DIFF"
   fill
   className="
@@ -362,7 +362,7 @@ export default function Highlights() {
   "
 >
 <Image
-  src="/images/highlights/growth.jpg"
+  src="/images/highlights/growth.webp"
   alt="Tiềm năng tăng giá"
   fill
   className="
@@ -431,7 +431,7 @@ lg:row-span-1
   "
 >
 <Image
-  src="/images/highlights/downtown.jpg"
+  src="/images/highlights/downtown.webp"
   alt="Downtown"
   fill
   className="
@@ -498,7 +498,7 @@ lg:row-span-1
   "
 >
 <Image
-  src="/images/highlights/forrent.jpg"
+  src="/images/highlights/forrent.webp"
   alt="Khai thác cho thuê"
   fill
   className="
@@ -566,7 +566,7 @@ lg:row-span-1
   "
 >
 <Image
-  src="/images/highlights/rumor.jpg"
+  src="/images/highlights/rumor.webp"
   alt="Rumor"
   fill
   className="
