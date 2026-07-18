@@ -253,19 +253,23 @@ setPurpose("");
   onChange={(e) => setBudget(e.target.value)}
     name="budget"
     className="
-      w-full
-      rounded-xl
-      border
-      border-slate-300
-      bg-white
-      px-4
-      py-3
-      text-slate-800
-      focus:border-[#C59A45]
-      focus:outline-none
-      focus:ring-2
-      focus:ring-[#D6B46A]/30
-    "
+  w-full
+  rounded-2xl
+  border
+  border-[#E7DDC8]
+  bg-white
+  px-5
+  py-4
+  text-[16px]
+  font-medium
+  text-[#3F3528]
+  outline-none
+  transition-all
+  duration-300
+  focus:border-[#C59A45]
+  focus:ring-4
+  focus:ring-[#D6B46A]/20
+"
   >
     <option value="">Chọn ngân sách</option>
     <option>Dưới 3 tỷ</option>
@@ -281,19 +285,23 @@ setPurpose("");
   onChange={(e) => setPurpose(e.target.value)}
     name="purpose"
     className="
-      w-full
-      rounded-xl
-      border
-      border-slate-300
-      bg-white
-      px-4
-      py-3
-      text-slate-800
-      focus:border-[#C59A45]
-      focus:outline-none
-      focus:ring-2
-      focus:ring-[#D6B46A]/30
-    "
+  w-full
+  rounded-2xl
+  border
+  border-[#E7DDC8]
+  bg-white
+  px-5
+  py-4
+  text-[16px]
+  font-medium
+  text-[#3F3528]
+  outline-none
+  transition-all
+  duration-300
+  focus:border-[#C59A45]
+  focus:ring-4
+  focus:ring-[#D6B46A]/20
+"
   >
     <option value="">Chọn nhu cầu</option>
     <option>Studio (36m²)</option>
