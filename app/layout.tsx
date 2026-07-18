@@ -1,3 +1,4 @@
+  import { GoogleAnalytics } from "@next/third-parties/google";
   import type { Metadata } from "next";
   import "./globals.css";
   import { bodyFont } from "@/app/fonts";
@@ -91,9 +92,12 @@
       </head>
 
       <body className={bodyFont.className}>
-        <StructuredData />
-        {children}
-      </body>
+  <StructuredData />
+
+  {children}
+
+  <GoogleAnalytics gaId="G-S9JJ9R48M6" />
+</body>
     </html>
   );
 }
