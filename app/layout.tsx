@@ -62,7 +62,6 @@
     },
 
     icons: {
-      icon: "/images/favicon.ico",
       shortcut: "/images/favicon.ico",
       apple: "/images/favicon.ico",
     },
