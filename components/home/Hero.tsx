@@ -9,22 +9,6 @@ export default function Hero() {
   const [openLead, setOpenLead] = useState(false);
   const [openVideo, setOpenVideo] = useState(false);
 
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (!section) return;
-
-    const navbarHeight = window.innerWidth < 1024 ? 68 : 84;
-
-    const y =
-      section.getBoundingClientRect().top +
-      window.pageYOffset -
-      navbarHeight;
-
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
-    });
-  };
   return (
     <motion.section
   initial={{ y: -80 }}
@@ -47,7 +31,7 @@ export default function Hero() {
       bg-no-repeat
     "
     style={{
-      backgroundImage: "url('/images/hero-desktop.jpg')",
+      backgroundImage: "url('/images/hero-desktop.webp')",
       backgroundPosition: "center 80px",
     }}
   />
@@ -63,7 +47,7 @@ export default function Hero() {
       bg-no-repeat
     "
     style={{
-      backgroundImage: "url('/images/hero-mobile.jpg')",
+      backgroundImage: "url('/images/hero-mobile.webp')",
       backgroundPosition: "center 68px",
     }}
   />
@@ -123,11 +107,6 @@ export default function Hero() {
   className={`
     ${headingFont.className}
     mt-8
-    text-[56px]
-    lg:text-[82px]
-    font-semibold
-    leading-[0.95]
-    tracking-[-0.03em]
     text-[#3F3528]
     drop-shadow-[0_4px_12px_rgba(0,0,0,.25)]
     text-[60px]

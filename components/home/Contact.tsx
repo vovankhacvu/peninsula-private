@@ -39,7 +39,7 @@ export default function Contact() {
             opacity-60
           "
           style={{
-            backgroundImage: "url('/images/footer/footer-bg.jpg')",
+            backgroundImage: "url('/images/footer/footer-bg.webp')",
           }}
         />
 
@@ -133,7 +133,10 @@ duration-300
 
                 <div className="mt-6 flex items-start gap-3">
 
-                  <MapPin className="mt-1 h-5 w-5 text-[#D6B46A]" />
+                  <MapPin
+  aria-hidden="true"
+  className="mt-1 h-5 w-5 text-[#D6B46A]"
+/>
 
                   <span className="text-white/70">
                     565 Nguyễn Tất Thành
@@ -162,6 +165,7 @@ duration-300
 
                   <a
                     href="tel:0945562311"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-3 text-white/70 hover:text-[#D6B46A]"
                   >
                     <PhoneCall className="h-5 w-5" />
@@ -180,6 +184,7 @@ duration-300
 
                   <a
                     href="https://www.facebook.com/vubdsmientrung/"
+                    rel="noopener noreferrer"
                     target="_blank"
                     className="flex items-center gap-3 text-white/70 hover:text-[#D6B46A]"
                   >
@@ -205,6 +210,7 @@ duration-300
 
       <Link
         href="/privacy-policy"
+        rel="noopener noreferrer"
         className="flex items-center gap-3 text-white/70 transition hover:text-[#D6B46A]"
       >
         <ShieldCheck className="h-5 w-5" />
@@ -213,6 +219,7 @@ duration-300
 
       <Link
         href="/terms-of-use"
+        rel="noopener noreferrer"
         className="flex items-center gap-3 text-white/70 transition hover:text-[#D6B46A]"
       >
         <FileText className="h-5 w-5" />

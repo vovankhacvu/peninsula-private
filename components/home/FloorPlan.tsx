@@ -55,11 +55,11 @@ import { headingFont } from "@/app/fonts";
 
         {/* Desktop */}
 <Image
-  src="/images/floorplan/banner-desktop.jpg"
+   src="/images/floorplan/banner-desktop.webp"
   alt="Floor Plan"
   width={1800}
   height={1000}
-  priority
+  sizes="100vw"
   className="
     hidden
     md:block
@@ -74,7 +74,7 @@ import { headingFont } from "@/app/fonts";
 
 {/* Mobile */}
 <Image
-  src="/images/floorplan/banner-mobile.jpg"
+  src="/images/floorplan/banner-mobile.webp"
   alt="Floor Plan"
   width={800}
   height={1400}
@@ -98,17 +98,16 @@ import { headingFont } from "@/app/fonts";
     "
     >
     <a
-        href="/images/floorplan/tongquan.jpg"
+        href="/images/floorplan/tongquan.webp"
         data-fancybox="floorplan"
         className="
-        rounded-full
-        bg-[#C59A45]
-        px-7
-        py-3
-        font-semibold
-        text-white
-        shadow-lg
-        "
+rounded-full
+bg-[#C59A45]
+px-7
+py-3
+font-semibold
+text-[#2E2417]
+"
     >
         Xem chi tiết mặt bằng
     </a>
@@ -167,92 +166,92 @@ import { headingFont } from "@/app/fonts";
             </p>
 
             <a
-        href="/images/floorplan/total.jpg"
-        data-fancybox="floorplan"
-        className="
-            mt-10
-            inline-flex
-            rounded-full
-            bg-[#C59A45]
-            px-8
-            py-4
-            font-semibold
-            text-white
-            transition-all
-            duration-300
-            hover:scale-105
-            hover:bg-[#B48A3A]
-        "
-        >
-        Xem chi tiết mặt bằng
-        </a>
+  href="/images/floorplan/total.webp"
+  data-fancybox="floorplan"
+  className="
+    mt-10
+    inline-flex
+    rounded-full
+    bg-[#D6B46A]
+    px-8
+    py-4
+    font-semibold
+    text-[#2E2417]
+    transition-all
+    duration-300
+    hover:scale-105
+    hover:bg-[#C59A45]
+  "
+>
+  Xem chi tiết mặt bằng
+</a>
         <div className="hidden">
 
         <a
-            href="/images/floorplan/b.jpg"
+            href="/images/floorplan/b.webp"
             data-fancybox="floorplan"
         />
 
         <a
-            href="/images/floorplan/1.jpg"
+            href="/images/floorplan/1.webp"
             data-fancybox="floorplan"
         />
 
         <a
-            href="/images/floorplan/2.jpg"
+            href="/images/floorplan/2.webp"
             data-fancybox="floorplan"
         />
         <a
-            href="/images/floorplan/3.jpg"
-            data-fancybox="floorplan"
-        />
-
-        <a
-            href="/images/floorplan/4.jpg"
+            href="/images/floorplan/3.webp"
             data-fancybox="floorplan"
         />
 
         <a
-            href="/images/floorplan/5.jpg"
-            data-fancybox="floorplan"
-        />
-        <a
-            href="/images/floorplan/6-20.jpg"
+            href="/images/floorplan/4.webp"
             data-fancybox="floorplan"
         />
 
         <a
-            href="/images/floorplan/21.jpg"
+            href="/images/floorplan/5.webp"
+            data-fancybox="floorplan"
+        />
+        <a
+            href="/images/floorplan/6-20.webp"
             data-fancybox="floorplan"
         />
 
         <a
-            href="/images/floorplan/22-29.jpg"
+            href="/images/floorplan/21.webp"
             data-fancybox="floorplan"
         />
 
         <a
-            href="/images/floorplan/30-37.jpg"
+            href="/images/floorplan/22-29.webp"
             data-fancybox="floorplan"
         />
 
         <a
-            href="/images/floorplan/38.jpg"
+            href="/images/floorplan/30-37.webp"
             data-fancybox="floorplan"
         />
 
         <a
-            href="/images/floorplan/39.jpg"
+            href="/images/floorplan/38.webp"
+            data-fancybox="floorplan"
+        />
+
+        <a
+            href="/images/floorplan/39.webp"
             data-fancybox="floorplan"
         />
         
         <a
-            href="/images/floorplan/40.jpg"
+            href="/images/floorplan/40.webp"
             data-fancybox="floorplan"
         />
 
         <a
-            href="/images/floorplan/mai.jpg"
+            href="/images/floorplan/mai.webp"
             data-fancybox="floorplan"
         />
         </div>

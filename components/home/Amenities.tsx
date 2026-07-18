@@ -16,37 +16,37 @@ const amenities = [
     title: "Infinity Pool",
     desc: "Tầm nhìn trực diện sông Hàn",
     icon: Waves,
-    image: "/images/amenities/pool.jpg",
+    image: "/images/amenities/pool.webp",
   },
   {
     title: "Sky Lounge",
     desc: "Không gian thư giãn trên cao",
     icon: Martini,
-    image: "/images/amenities/lounge.jpg",
+    image: "/images/amenities/lounge.webp",
   },
   {
     title: "Fitness Center",
     desc: "Phòng gym hiện đại",
     icon: Dumbbell,
-    image: "/images/amenities/gym.jpg",
+    image: "/images/amenities/gym.webp",
   },
   {
     title: "Luxury Retail",
     desc: "Không gian mua sắm cao cấp",
     icon: Building2,
-    image: "/images/amenities/mall.jpg",
+    image: "/images/amenities/mall.webp",
   },
   {
     title: "Sky Courtyard Garden",
     desc: "Ốc đảo xanh giữa tầng cao",
     icon: Trees,
-    image: "/images/amenities/courtyard.jpg",
+    image: "/images/amenities/courtyard.webp",
   },
   {
     title: "Private Spa",
     desc: "Thư giãn và chăm sóc sức khỏe",
     icon: Sparkles,
-    image: "/images/amenities/spa.jpg",
+    image: "/images/amenities/spa.webp",
   },
 ];
 

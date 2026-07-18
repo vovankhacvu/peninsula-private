@@ -37,7 +37,7 @@ export default function About() {
       controls
       playsInline
       preload="metadata"
-      poster="/images/about/card-downtown.jpg"
+      poster="/images/about/card-downtown.webp"
       className="
         aspect-video
         w-full

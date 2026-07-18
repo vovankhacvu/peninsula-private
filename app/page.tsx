@@ -13,7 +13,6 @@ import Amenities from "@/components/home/Amenities";
 import FloorPlan from "@/components/home/FloorPlan";
 import Highlights from "@/components/home/Highlights";
 import Contact from "@/components/home/Contact";
-import Gallery from "@/components/home/Gallery";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);

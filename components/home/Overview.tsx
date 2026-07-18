@@ -9,37 +9,37 @@ const items = [
     icon: Building2,
     value: "39",
     title: "Tầng biểu tượng",
-    image: "/images/cards/card-building.jpg",
+    image: "/images/cards/card-building.webp",
   },
   {
     icon: Gem,
     value: "5★",
     title: "Tiện ích chuẩn quốc tế",
-    image: "/images/cards/card-amenity.jpg",
+    image: "/images/cards/card-amenity.webp",
   },
   {
     icon: MapPin,
     value: "Downtown",
     title: "Trung tâm Đà Nẵng",
-    image: "/images/cards/card-downtown.jpg",
+    image: "/images/cards/card-downtown.webp",
   },
   {
     icon: Trees,
     value: "River View",
     title: "Sông Hàn & DIFF",
-    image: "/images/cards/card-firework.jpg",
+    image: "/images/cards/card-firework.webp",
   },
   {
     icon: ShieldCheck,
     value: "Luxury",
     title: "Không gian sống",
-    image: "/images/cards/card-luxury.jpg",
+    image: "/images/cards/card-luxury.webp",
   },
   {
     icon: TrendingUp,
     value: "High",
     title: "Tiềm năng đầu tư",
-    image: "/images/cards/card-investment.jpg",
+    image: "/images/cards/card-investment.webp",
   },
 ];
 
@@ -96,20 +96,22 @@ pt-15 pb-20
     shadow-[0_35px_100px_rgba(0,0,0,.18)]
   "
 >
-  <img
-    src="/images/location.jpg"
-    alt="Peninsula Private"
-    className="
-h-[300px]
-w-full
-object-cover
-md:h-[420px]
-lg:h-[520px]
-transition-transform
-duration-700
-hover:scale-105
-"
-  />
+  <Image
+  src="/images/location.webp"
+  alt="Toàn cảnh dự án Peninsula Private Đà Nẵng"
+  width={1600}
+  height={900}
+  className="
+    h-[300px]
+    w-full
+    object-cover
+    md:h-[420px]
+    lg:h-[520px]
+    transition-transform
+    duration-700
+    hover:scale-105
+  "
+/>
 
   <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/10" />
 

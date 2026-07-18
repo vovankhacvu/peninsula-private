@@ -12,7 +12,6 @@ const menus = [
   { name: "Vị trí", href: "#vi-tri" },
   { name: "Tiện ích", href: "#tien-ich" },
   { name: "Mặt bằng", href: "#mat-bang" },
-  { name: "Nhà mẫu", href: "#nha-mau" },
   { name: "Điểm nổi bật", href: "#highlights" },
   { name: "Liên hệ", href: "#contact" },
 ];
@@ -96,6 +95,7 @@ animate={{
         <motion.button
   onClick={scrollToTop}
   className="flex-shrink-0 cursor-pointer"
+  aria-label="Quay về đầu trang"
   initial={{ opacity: 0, x: -30 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{
@@ -195,6 +195,7 @@ transition={{
   duration: 0.6,
 }}
           href="tel:0945562311"
+          aria-label="Gọi hotline 0945 562 311"
           className="
             ml-8
             mr-5
@@ -240,6 +241,7 @@ transition={{
   delay: 0.4,
 }}
           href="tel:0945562311"
+          aria-label="Gọi hotline 0945 562 311"
   className="
   
     ml-auto
@@ -261,25 +263,28 @@ transition={{
     lg:hidden
   "
 >
-  <Phone className="h-5 w-5 text-[#5A4416]" />
+  <Phone 
+  aria-hidden="true"
+  className="h-5 w-5 text-[#5A4416]" />
 
           <span className="text-[18px] font-bold text-[#5A4416]">
           </span>
         </motion.a>
 
         {/* Mobile Menu Button */}
-        <motion.button whileTap={{
-  scale: 0.9,
-}}
-
-whileHover={{
-  scale: 1.08,
-}}
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-[#5A4416] lg:hidden"
-        >
-          {isOpen ? <X size={30} /> : <Menu size={30} />}
-        </motion.button>
+        <motion.button
+        id="mobile-menu"
+  whileTap={{ scale: 0.9 }}
+  whileHover={{ scale: 1.08 }}
+  onClick={() => setIsOpen(!isOpen)}
+  className="text-[#5A4416] lg:hidden"
+  aria-label={isOpen ? "Đóng menu điều hướng" : "Mở menu điều hướng"}
+  aria-expanded={isOpen}
+  aria-controls="mobile-menu"
+  
+>
+  {isOpen ? <X size={30} /> : <Menu size={30} />}
+</motion.button>
 
       </Container>
 
@@ -307,6 +312,7 @@ whileHover={{
           <div className="flex flex-col px-6 py-4">
             {menus.map((menu) => (
               <button
+              type="button"
   key={menu.name}
   onClick={() => scrollToSection(menu.href.replace("#", ""))}
   className="

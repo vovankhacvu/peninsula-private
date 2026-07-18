@@ -85,7 +85,7 @@ export default function Location() {
   "
 >
   <Image
-    src="/images/location-map.jpg"
+    src="/images/location-map.webp"
     alt="Location"
     width={1800}
     height={1100}

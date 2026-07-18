@@ -25,9 +25,9 @@ const [purpose, setPurpose] = useState("");
 
         <div className="mx-auto h-14 w-14 animate-spin rounded-full border-4 border-[#E8D4A3] border-t-[#C59A45]" />
 
-        <h2 className="mt-8 text-3xl font-bold text-[#3F3528]">
+        <p className="mt-8 text-3xl font-bold text-[#3F3528]">
           Đang gửi thông tin...
-        </h2>
+        </p>
 
         <p className="mt-4 leading-8 text-[#6E655D]">
           Vui lòng chờ trong giây lát.
@@ -77,9 +77,9 @@ if (success) {
           </svg>
         </div>
 
-        <h2 className="mt-8 text-3xl font-bold text-[#3F3528]">
+        <p className="mt-8 text-3xl font-bold text-[#3F3528]">
           Đăng ký thành công
-        </h2>
+        </p>
 
         <p className="mt-4 leading-8 text-[#6E655D]">
           Cảm ơn anh/chị đã quan tâm đến Peninsula Private.
@@ -177,9 +177,9 @@ setPurpose("");
         "
       >
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-[#3F3528]">
+          <p className="text-3xl font-bold text-[#3F3528]">
             Đăng kí nhận thông tin
-          </h2>
+          </p>
 
           <p className="mt-3 text-[#6E655D] leading-7">
             Vui lòng để lại thông tin.
