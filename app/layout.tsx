@@ -62,9 +62,9 @@
     },
 
     icons: {
-      icon: "/images/favicon-v2.png",
-      shortcut: "/images/favicon-v2.png",
-      apple: "/images/favicon-v2.png",
+      icon: "/images/favicon.ico",
+      shortcut: "/images/favicon.ico",
+      apple: "/images/favicon.ico",
     },
   };
 
