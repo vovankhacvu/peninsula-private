@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, Phone, PhoneCall } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Container from "../ui/Container";
+import { trackEvent } from "@/lib/gtag";
 
 const menus = [
   { name: "Giới thiệu", href: "#gioi-thieu" },
@@ -195,6 +196,11 @@ transition={{
   duration: 0.6,
 }}
           href="tel:0945562311"
+          onClick={() =>
+    trackEvent("click_phone", {
+      phone_number: "0945562311",
+    })
+  }
           aria-label="Gọi hotline 0945 562 311"
           className="
             ml-8
@@ -241,6 +247,11 @@ transition={{
   delay: 0.4,
 }}
           href="tel:0945562311"
+          onClick={() =>
+    trackEvent("click_phone", {
+      phone_number: "0945562311",
+    })
+  }
           aria-label="Gọi hotline 0945 562 311"
   className="
   

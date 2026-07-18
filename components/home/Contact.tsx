@@ -13,6 +13,7 @@ import {
   MapPin,
   ShieldCheck,
 } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 export default function Contact() {
   const [openLead, setOpenLead] = useState(false);
@@ -165,6 +166,11 @@ duration-300
 
                   <a
                     href="tel:0945562311"
+                    onClick={() =>
+    trackEvent("click_phone", {
+      phone_number: "0945562311",
+    })
+  }
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 text-white/70 hover:text-[#D6B46A]"
                   >
