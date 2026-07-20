@@ -24,7 +24,22 @@ export default function Home() {
 
     return () => clearTimeout(timer);
   }, []);
+useEffect(() => {
+  if (!loading && window.location.hash) {
+    const id = window.location.hash.replace("#", "");
 
+    setTimeout(() => {
+      const el = document.getElementById(id);
+
+      if (el) {
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 100);
+  }
+}, [loading]);
   return (
     <>
       <LoadingScreen loading={loading} />

@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone, PhoneCall } from "lucide-react";
@@ -8,14 +8,14 @@ import Container from "../ui/Container";
 import { trackEvent } from "@/lib/gtag";
 
 const menus = [
-  { name: "Giới thiệu", href: "#gioi-thieu" },
-  { name: "Tổng quan", href: "#tong-quan" },
-  { name: "Vị trí", href: "#vi-tri" },
-  { name: "Tiện ích", href: "#tien-ich" },
-  { name: "Mặt bằng", href: "#mat-bang" },
-  { name: "Điểm nổi bật", href: "#highlights" },
-  { name: "Liên hệ", href: "#contact" },
-];
+  { name: "Giới thiệu", type: "section", href: "gioi-thieu" },
+  { name: "Tổng quan", type: "section", href: "tong-quan" },
+  { name: "Vị trí", type: "section", href: "vi-tri" },
+  { name: "Tiện ích", type: "section", href: "tien-ich" },
+  { name: "Mặt bằng", type: "section", href: "mat-bang" },
+  { name: "Cẩm nang", type: "page", href: "/blog" },
+  { name: "Liên hệ", type: "section", href: "contact" },
+] as const;
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -131,52 +131,49 @@ animate={{
 >
           <ul className="flex items-center justify-center gap-10">
             {menus.map((menu, index) => (
-              <motion.li initial={{
-  opacity: 0,
-  y: -20,
-}}
+  <motion.li
+    key={menu.name}
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+      delay: 0.45 + index * 0.08,
+      duration: 0.4,
+    }}
+    className="
+      relative
+      cursor-pointer
+      text-[15px]
+      font-medium
+      tracking-wide
+      text-[#4B443C]
+      transition-all
+      duration-300
+      hover:-translate-y-0.5
+      hover:text-[#B48A3A]
 
-animate={{
-  opacity: 1,
-  y: 0,
-}}
+      after:absolute
+      after:left-0
+      after:-bottom-2
+      after:h-[2px]
+      after:w-0
+      after:bg-[#B48A3A]
+      after:transition-all
 
-transition={{
-  delay: 0.45 + index * 0.08,
-  duration: 0.4,
-}}
-                key={menu.name}
-                className="
-                  relative
-                  cursor-pointer
-                  text-[15px]
-                  font-medium
-                  tracking-wide
-                  text-[#4B443C]
-                  transition-all
-                  duration-300
-                  hover:-translate-y-0.5
-                  hover:text-[#B48A3A]
-
-                  after:absolute
-                  after:left-0
-                  after:-bottom-2
-                  after:h-[2px]
-                  after:w-0
-                  after:bg-[#B48A3A]
-                  after:transition-all
-
-                  hover:after:w-full
-                "
-              >
-               <button
-  type="button"
-  onClick={() => scrollToSection(menu.href.replace("#", ""))}
->
-  {menu.name}
-</button>
-              </motion.li>
-            ))}
+      hover:after:w-full
+    "
+  >
+    {menu.type === "page" ? (
+      <Link href={menu.href}>{menu.name}</Link>
+    ) : (
+      <button
+        type="button"
+        onClick={() => scrollToSection(menu.href)}
+      >
+        {menu.name}
+      </button>
+    )}
+  </motion.li>
+))}
           </ul>
         </motion.nav>
 
@@ -321,24 +318,43 @@ transition={{
   className="border-t border-[#E8DDC6] bg-[#FCFBF8] lg:hidden"
 >
           <div className="flex flex-col px-6 py-4">
-            {menus.map((menu) => (
-              <button
-              type="button"
-  key={menu.name}
-  onClick={() => scrollToSection(menu.href.replace("#", ""))}
-  className="
-    border-b
-    border-[#EEE4D1]
-    py-4
-    text-left
-    text-[#5A4416]
-    transition
-    hover:text-[#B48A3A]
-  "
->
-  {menu.name}
-</button>
-            ))}
+            {menus.map((menu) =>
+  menu.type === "page" ? (
+    <Link
+      key={menu.name}
+      href={menu.href}
+      onClick={() => setIsOpen(false)}
+      className="
+        border-b
+        border-[#EEE4D1]
+        py-4
+        text-left
+        text-[#5A4416]
+        transition
+        hover:text-[#B48A3A]
+      "
+    >
+      {menu.name}
+    </Link>
+  ) : (
+    <button
+      key={menu.name}
+      type="button"
+      onClick={() => scrollToSection(menu.href)}
+      className="
+        border-b
+        border-[#EEE4D1]
+        py-4
+        text-left
+        text-[#5A4416]
+        transition
+        hover:text-[#B48A3A]
+      "
+    >
+      {menu.name}
+    </button>
+  )
+)}
           </div>
         </motion.div>
     

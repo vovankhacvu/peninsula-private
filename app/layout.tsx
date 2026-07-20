@@ -1,7 +1,7 @@
   import { GoogleAnalytics } from "@next/third-parties/google";
   import type { Metadata } from "next";
   import "./globals.css";
-  import { bodyFont } from "@/app/fonts";
+  import { bodyFont, headingFont } from "@/app/fonts";
   import StructuredData from "@/components/SEO/StructuredData";
   export const metadata: Metadata = {
     metadataBase: new URL("https://www.peninsulaprivatedn.com"),
@@ -91,7 +91,7 @@
         />
       </head>
 
-      <body className={bodyFont.className}>
+      <body className={`${bodyFont.className} ${headingFont.variable}`}>
   <StructuredData />
 
   {children}
