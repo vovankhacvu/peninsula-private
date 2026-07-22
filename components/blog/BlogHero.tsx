@@ -16,16 +16,16 @@ export default function BlogHero() {
             <span>/</span>
 
             <span className="text-[#3F3528]">
-              Cẩm nang
+              Tin tức & Pháp lý
             </span>
           </nav>
 
           <span className="rounded-full border border-[#D7C39A] px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-[#B48A3A]">
-            Cẩm nang
+            Tin tức & Pháp lý
           </span>
 
           <h1 className="[font-family:var(--font-heading)] text-6xl font-semibold leading-tight text-[#3F3528] md:text-7xl">
-            Cẩm nang đầu tư Peninsula Private
+            Tin tức đầu tư Peninsula Private
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-[#6B6259]">

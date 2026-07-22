@@ -13,7 +13,7 @@ const menus = [
   { name: "Vị trí", type: "section", href: "vi-tri" },
   { name: "Tiện ích", type: "section", href: "tien-ich" },
   { name: "Mặt bằng", type: "section", href: "mat-bang" },
-  { name: "Cẩm nang", type: "page", href: "/blog" },
+  { name: "Tin tức & Pháp lý", type: "page", href: "/blog" },
   { name: "Liên hệ", type: "section", href: "contact" },
 ] as const;
 
